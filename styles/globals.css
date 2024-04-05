@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.translate-z-0 {
+  transform: translateZ(0px);
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  background-color: #f13024;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after,
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  color: #f13024;
+}
+
+/*  swal css   */
+.your-custom-popup-class {
+  background-color: #000925;
+}
+.error {
+  color: red;
+  font-size: 10px;
+  /* margin-top: 0.25rem; */
+  display: flex;
+  flex-direction: column;
+}
+
+@layer base {
+  body {
+    @apply bg-secondary overflow-hidden leading-relaxed;
+  }
+  .page {
+    @apply w-full h-screen overflow-hidden;
+  }
+  .h1 {
+    @apply text-[30px] leading-tight lg:text-[60px]  md:leading-[1.3] mb-8 font-semibold;
+  }
+  .h2 {
+    @apply text-[30px] leading-tight lg:text-[54px] md:leading-[1.3] mb-4 font-semibold;
+  }
+  p {
+    @apply leading-[1.4] lg:leading-[1.8] text-white/60 font-light;
+  }
+  .btn,
+  .input {
+    @apply h-[52px];
+  }
+  .input {
+    @apply w-full h-[52px] rounded-lg pl-6 capitalize;
+  }
+  .input,
+  .textarea {
+    @apply bg-transparent outline-none focus:ring-1 focus:ring-accent border border-white/20 placeholder:text-white/30 placeholder:font-light max-h-20 lg:max-h-full;
+  }
+  .textarea {
+    @apply w-full h-[180px] p-6 capitalize rounded-lg resize-none;
+  }
+  
+}
